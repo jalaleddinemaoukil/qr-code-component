@@ -1,28 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | QR code component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      display: flex;
+      gap: 5rem;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--color-slate-300, #D5E1EF);
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      padding: var(--spacing-200, 1rem) var(--spacing-200, 1rem) var(--spacing-500, 2.5rem) var(--spacing-200, 1rem);
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: var(--spacing-300, 1.5rem);
+      border-radius: 1.25rem;
+      background: var(--color-white, #FFF);
+      width: 100%;
+      max-width: 22rem;
+      box-sizing: border-box;
+
+      /* card-shadow */
+      box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .qr-image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+      border-radius: 0.625rem;
+      background: var(--color-blue-600, #2C7DFA);
+      object-fit: cover;
+    }
+
+    .text-lockup {
+      display: flex;
+      padding: 0 var(--spacing-200, 1rem);
+      flex-direction: column;
+      align-items: center;
+      align-self: stretch;
+    }
+
+    h1 {
+      color: var(--color-slate-900, #1F314F);
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+
+      /* text-preset-1 */
+      font-family: Outfit;
+      font-size: var(--font-size-text-preset-1, 1.375rem);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+      word-break: break-word;
+      align-self: stretch;
+      /* 1.65rem */
+    }
+
+    p {
+      color: var(--color-slate-500, #68778D);
+      text-align: center;
+      font-feature-settings: 'liga' off, 'clig' off;
+
+      /* text-preset-2 */
+      font-family: Outfit;
+      font-size: var(--font-size-text-preset-2, 1rem);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      /* 1.3125rem */
+      letter-spacing: 0.0125rem;
+    }
   </style>
 </head>
+
 <body>
-
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
+  <div class="container">
+    <img src="/qr-code-component-main/images/image-qr-code.png" alt="QR" class="qr-image">
+    <div class="text-lockup">
+      <h1>Improve your front-end skills by building projects</h1>
+      <p>
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+      </p>
+    </div>
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Jalal Eddine Maoukil</a>.
   </div>
 </body>
+
 </html>
